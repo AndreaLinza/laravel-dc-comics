@@ -14,7 +14,7 @@ class ComicController extends Controller
     {
         //
             $dati = Comic::all();
-            return view('home', ['comics'=>$dati]);
+            return view('comic.index', ['comics'=>$dati]);
     }
 
     /**
