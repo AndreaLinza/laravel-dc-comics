@@ -1,0 +1,29 @@
+@use "./variables" as *;
+
+header {
+    font-family: $font-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    img {
+        width: 70px;
+    }
+
+    .navbar-nav {
+        font-size: .8rem;
+        font-weight: 600;
+
+
+        a {
+            color: $color-text;
+
+            &:hover {
+                color: $color-primary;
+                border-bottom: 1px solid $color-primary;
+            }
+        }
+    }
+}

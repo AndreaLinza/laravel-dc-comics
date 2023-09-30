@@ -1,0 +1,33 @@
+@use "./variables" as *;
+
+.blue-banner {
+    font-family: $font-primary;
+    background-color: $color-primary;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    min-height: 100px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 60px;
+            
+            &:last-child{
+                height: 50px;
+            }
+
+        }
+
+
+        span {
+            font-size: .8rem;
+            display: flex;
+            padding-left: 1rem;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+}

@@ -1,2 +1,11 @@
 @use "bootstrap";
+@use "./partials/header";
+@use "./partials/navbar";
+@use "./partials/variables";
+@use "./partials/singleCardDescription";
+@use "./partials/firstsection.scss";
+@use "./partials/bluebanner.scss";
+@use "./partials/cardcontent";
+@use "./partials/footer";
+
 @use "@fortawesome/fontawesome-free/css/all.min.css";

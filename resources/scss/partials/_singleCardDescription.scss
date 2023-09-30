@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+
+.thumbnail-container {
+    height: 250px;
+    width: 100%;
+    
+    .thumbnail {
+        position: absolute;
+        height: 250px;
+        aspect-ratio: 9/16;
+        bottom: -15%;
+        left:25%
+        
+    }
+}
+
+.divider{
+    height: 50px;
+    background-color: $color-primary;
+}
+.card-section {
+    background-color: white;
+
+}
