@@ -1,12 +1,89 @@
-.card-section{
+@use "./variables" as *;
+
+.card-section {
+    min-height: 500px;
     background-color: white;
-    h1{
+
+    h1 {
         color: #003F5D;
     }
 
-    .green-banner{
-        background-color:#55BA59 ;
+    .green-banner {
+        background-color: #55BA59;
+
     }
 
+    .border-banner {
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+    .dropdown {
+        button {
+            color: white;
+            background-color: transparent;
+            border: 0;
+            font-size: 1.1rem;
+        }
+    }
+
+}
+
+.info-section {
+    background-color: #F6F6F6;
+    overflow: auto;
+    padding-bottom: 10rem;
+
+    
+    h2,
+    h5 {
+        color: #003F5D;
+    }
+    
+    .my-color{
+        color: $color-primary;
+    }
+    
+}
+.border-col {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.link-img{
+    width: 69px;
+    height: 67px;
+    overflow: hidden;
+
+    .dc-img{
+        transform: translateX(5px);
+    }
+    .dc-shop-img{
+        transform: translateX(-195px);
+    }
+    .locator-img{
+        transform: translateX(-135px);
+
+    }
+    .subscrition-img{
+        transform: translateX(-65px);
+    }
+
+    img{
+        width: 270px;
+    }
+}
+
+.banner-link{
+    padding: 0;
+    background-color: #F6F6F6;
+    min-height: 80px;
+    z-index: 3;
+
+    span{
+
+        color: lightgray !important;
+    }
 
 }

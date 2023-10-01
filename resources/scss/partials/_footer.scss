@@ -9,7 +9,7 @@ footer {
     background-image: url("/public/images/footer-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
+    overflow: auto;
 
     .container>div{
         max-height: 500px;
