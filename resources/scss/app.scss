@@ -3,9 +3,11 @@
 @use "./partials/navbar";
 @use "./partials/variables";
 @use "./partials/singleCardDescription";
-@use "./partials/firstsection.scss";
-@use "./partials/bluebanner.scss";
-@use "./partials/cardcontent";
+@use "./partials/jumboHome.scss";
+@use "./partials/blueBanner.scss";
+@use "./partials/cardsContent";
+@use "./partials/cardContent";
 @use "./partials/footer";
+@use "./partials/jumboCard";
 
 @use "@fortawesome/fontawesome-free/css/all.min.css";

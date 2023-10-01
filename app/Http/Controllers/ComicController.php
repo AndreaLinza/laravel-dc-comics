@@ -20,9 +20,12 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $dati = Comic::findOrFail($id);
+
+        return view('comics.show', ['comics' => $dati]);
+
     }
 
 }

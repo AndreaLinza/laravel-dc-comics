@@ -23,28 +23,28 @@
 @endphp
 
 <footer class="position-relative">
-    <div class="container">
-        <img class="dc-logo" src="/images/dc-logo-bg.png" alt="">
+    <div class="container d-flex justify-content-md-start">
         <div class="d-flex flex-column flex-wrap w-25 pt-4">
             @foreach ($footerList as $singleEl)
-                <div class="py-2 pe-5">
-                    <h3 class="title">{{ $singleEl['title'] }}</h3>
-                    <ul class="me-auto mb-2 mb-lg-0 list-unstyled text-white pb-3">
-
-                        @foreach ($singleEl['credits'] as $credit)
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">{{ $credit }}</a>
-                            </li>
-                        @endforeach
-
-                    </ul>
-                </div>
+            <div class="d-flex flex-column justify-content-end z-2 py-2 pe-5">
+                <h3 class="title">{{ $singleEl['title'] }}</h3>
+                <ul class="me-auto mb-2 mb-lg-0 list-unstyled text-white pb-3">
+                    
+                    @foreach ($singleEl['credits'] as $credit)
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">{{ $credit }}</a>
+                    </li>
+                    @endforeach
+                    
+                </ul>
+            </div>
             @endforeach
         </div>
     </div>
+    <img class="dc-logo" src="/images/dc-logo-bg.png" alt="">
     <div class="sign-banner">
-        <div class="container align-items-center d-flex justify-content-between">
-            <div>
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between ">
+            <div class="py-4 ">
                 <button type="button" class="btn btn-outline-primary border-3 text-light fw-bold">SIGN-UP NOW!</button>
             </div>
             <div class="d-md-flex align-items-center">
@@ -55,10 +55,6 @@
                             <a href="#"><img src="{{ $appLink }}" alt=""></a>
                         </div>
                     @endforeach
-                    {{-- <a href="#"><img src="/images/footer-twitter.png" alt=""></a>
-                    <a href="#"><img src="/images/footer-youtube.png" alt=""></a>
-                    <a href="#"><img src="/images/footer-pinterest.png" alt=""></a>
-                    <a href="#"><img src="/images/footer-periscope.png" alt=""></a> --}}
                 </div>
             </div>
 

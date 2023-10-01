@@ -3,9 +3,9 @@
 @section('title', 'DC Comics - Homepage')
 
 
-@section('homeContent')
-    
-    @include('partials.cardContent')
+@section('content')
+    @include('partials.jumboHome')
+    @include('partials.cardsContent')
     @include('partials.blueBanner')
 
 @endsection

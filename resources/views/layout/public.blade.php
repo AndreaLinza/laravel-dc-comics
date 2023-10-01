@@ -28,7 +28,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <title>@yield("title")</title>
 
     @vite(['resources/scss/app.scss', 'resources/js/app.js'])
@@ -37,21 +37,11 @@
 </head>
 <body>
     
-    @include('header')
+    @include('partials.header')
 
-    @yield('homeContent')
-    @yield('comicContent')
-    @yield('charactersContent')
-    @yield('moviesContent')
-    @yield('tvContent')
-    @yield('gamesContent')
-    @yield('collectiblesContent')
-    @yield('videoContent')
-    @yield('fansContent')
-    @yield('newsContent')
-    @yield('shopContent')
+    @yield('content')
     
-    @include("footer")
+    @include("partials.footer")
     
     
 </body>
