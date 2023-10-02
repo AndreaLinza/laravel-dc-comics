@@ -1,6 +1,6 @@
 @extends('layout.public')
 
-@section('title', 'DC Comics - Comics')
+@section('title', 'DC Comics - Show')
 
 
 @section('content')

@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +14,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+//Create
+Route::get("/comics/create", [ComicController::class, "create"])->name("comics.create");
+//Store
+Route::post("/", [ComicController::class, "store"])->name("comics.store");
+
 Route::get('/', [ComicController::class, 'index'])->name('comics.index');
+
 Route::get('/{comics}', [ComicController::class, 'show'])->name('comics.show');

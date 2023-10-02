@@ -23,6 +23,6 @@
             @endforeach
 
         </div>
-        <button class="btn btn-primary rounded-0 text-uppercase" type="button">Load More</button>
+        <a href="{{route('comics.create')}}" class="btn btn-primary ms-auto rounded-0 text-uppercase">Add More</a>
     </div>
 </section>
