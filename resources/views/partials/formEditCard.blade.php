@@ -82,6 +82,13 @@
             @enderror
         </div>
         <div class="col-12">
+            <form action="{{ route('comics.destroy', $comics) }}" method="POST">
+                @csrf
+
+                @method('DELETE')
+
+                <button class="btn btn-danger">Elimina</button>
+            </form>
             <button type="submit" class="btn btn-primary">Salva</button>
             <a href="{{ route('comics.index') }}" class="btn btn-outline-secondary">Indietro</a>
         </div>
