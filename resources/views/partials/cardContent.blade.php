@@ -42,5 +42,6 @@
             </div>
 
         </div>
+        <a href="{{route('comics.edit', $comics->id)}}" class="btn btn-warning">Modifica</a>
     </div>
 </section>

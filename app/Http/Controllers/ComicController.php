@@ -39,38 +39,69 @@ class ComicController extends Controller
         $data = $request->all();
 
 
-        // $data = $request->validate([
-        //     "title" => "required|string",
-        //     "description" => "required|string",
-        //     "thumb" => "required|string",
-        //     "price" => "required|decimal:6,2",
-        //     "series" => "required|string",
-        //     "sale_date" => "required|date",
-        //     "type" => "required|string",
-        //     "artists" => "required|string",
-        //     "writers" => "required|string",
-        // ]);
-        //$data["artists"] = json_encode([$data["artists"]]);
-        //$data["writers"] = json_encode([$data["writers"]]);
+        $data = $request->validate ([
+            "title" => "required|string",
+            "description" => "required|string",
+            "thumb" => "required|string",
+            "price" => "required|decimal:0,2",
+            "series" => "required|string",
+            "sale_date" => "required|date",
+            "type" => "required|string",
+            "artists" => "required|string",
+            "writers" => "required|string",
+        ]);
+        $data["artists"] = json_encode([$data["artists"]]);
+        $data["writers"] = json_encode([$data["writers"]]);
 
         $newComic = new Comic();
 
-        $newComic ['title'] = $data['title'];
-        $newComic ['description'] = $data['description'];
-        $newComic ['thumb'] = $data['thumb'];
-        $newComic ['price'] = $data['price'];
-        $newComic ['series'] = $data['series'];
-        $newComic ['sale_date'] = $data['sale_date'];
-        $newComic ['type'] = $data['type'];
-        $newComic ['artists'] = $data['artists'];
-        $newComic ['writers'] = $data['writers'];
+        // $newComic ['title'] = $data['title'];
+        // $newComic ['description'] = $data['description'];
+        // $newComic ['thumb'] = $data['thumb'];
+        // $newComic ['price'] = $data['price'];
+        // $newComic ['series'] = $data['series'];
+        // $newComic ['sale_date'] = $data['sale_date'];
+        // $newComic ['type'] = $data['type'];
+        // $newComic ['artists'] = $data['artists'];
+        // $newComic ['writers'] = $data['writers'];
 
 
 
-        //$newComic->fill($data);
+        $newComic->fill($data);
 
         $newComic->save();
 
         return redirect()->route('comics.index');
+    }
+
+
+    public function edit($id){
+        $dati = Comic::findOrFail($id);
+        return view('comics.edit', ['comics' => $dati]);
+    }
+
+    public function update(Request $request, $id){
+        $dati = Comic::findOrFail($id);
+        
+
+
+        $data = $request->validate ([
+            "title" => "required|string",
+            "description" => "required|string",
+            "thumb" => "required|string",
+            "price" => "required|decimal:0,2",
+            "series" => "required|string",
+            "sale_date" => "required|date",
+            "type" => "required|string",
+            "artists" => "required|string",
+            "writers" => "required|string",
+        ]);
+        $data["artists"] = json_encode($data["artists"]);
+        $data["writers"] = json_encode($data["writers"]);
+
+        $dati->update($data);
+
+        return redirect()->route('comics.show', $dati->id);
+
     }
 }

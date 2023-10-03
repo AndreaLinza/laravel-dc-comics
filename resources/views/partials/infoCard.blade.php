@@ -13,7 +13,7 @@
                         <h5>Art by:</h5>
                     </div>
                     <div class="col">
-                        <p class="my-color">{{str_replace($el, '', $comics['artists']) }}</p>
+                        <p class="my-color">{{(str_replace($el, '', $comics['artists']) )}}</p>
                     </div>
                 </div>
                 <div class="row border-col py-3">
@@ -21,7 +21,7 @@
                         <h5>Written by:</h5>
                     </div>
                     <div class="col">
-                        <p class="my-color">{{ str_replace($el, '',$comics['writers']) }}</p>
+                        <p class="my-color">{{(str_replace($el, '', $comics['writers']))}}</p>
                     </div>
                 </div>
 
